@@ -1,0 +1,105 @@
++between(0px, 319px)
+	.body
+		width 319px
+		
+	.main-header
+		size(100%, auto)
+
+		&__bunner
+			size(100%, 255px)
+
+	.top-header
+		size(100%, 48px)
+		padding 0 32px
+		background-color rgba(#000, 0.6)
+
+	.logo
+		font(Roboto, 22px, 22px, 500)
+
+		&--accent
+			margin-left -6px
+			font(Pacifico, 35px, 22px)
+
+	.main-nav
+		size(24px)
+		
+		&__menu
+			position absolute
+			top 43px
+			right  -32px
+			display none
+			size(319px, auto)
+		
+		&__btn
+			display block
+			margin-top -4px
+			margin-left -5px
+			size(26px)
+			padding 3px
+		
+		&__svg-menu
+			size(100%)
+
+		&__item
+			display block
+			padding 40px
+			background-color rgba(#000, 0.9)
+			border-bottom 1px solid textColor
+			text-align center
+			font(Roboto, 13px, 13px, 200)
+			
+			&--active
+				border-bottom 1px solid accent
+
+				&:after
+					display none
+			
+	.bunner
+		&__title
+			padding 13px 0
+			font(Exo, 22px)
+
+		&__tagline
+			padding 5px 28px
+			font(Roboto, 9px, 14px, 200)
+			
+	.main-content
+		size(100%, auto)
+		font(Roboto, 9.5px, 12px, 100)
+
+	.welcome
+		padding 25px 25px 6px
+
+		&__title
+			margin-bottom 11px
+			font(Roboto, 12px, 14px, 500)
+
+		&__discription
+			margin-bottom 19px
+			padding 0 9px
+			
+		&__option-list
+			justify-content center
+
+	.option
+		size(190px, auto)
+		padding 12px 15px
+
+		&:nth-of-type(1),
+		&:nth-of-type(2),
+		&:nth-of-type(3),
+		&:nth-of-type(4),
+		&:nth-of-type(5)
+			margin-bottom 17px
+
+		&__icon
+			size(21px, 25px)
+			margin-bottom 7px
+
+		&__title
+			font-size 11px
+			margin-bottom 10px
+
+		&__description
+			font-size 9px
+			line-height 12px

@@ -1,0 +1,190 @@
+*, *:before, *:after 
+	margin 0
+	padding 0
+	box-sizing border-box
+	text-decoration none
+	outline none
+
+body 
+	max-width 1600px
+	margin 0 auto
+	padding 0
+	background-color #fffcf4
+	color textColor
+	font(Roboto, 18px, 30px, 100)
+	
+.main-header
+	position relative
+	size(100%, 800px)
+	background-color darkText
+	background-image url('../images/bunner.jpg')
+	background-repeat no-repeat
+	background-size  auto 100%
+	background-position center
+	color #fff
+	overflow hidden
+	
+	&__bunner
+		size(100%, 680px)
+	
+.top-header
+	position relative
+	display flex
+	flex-direction row
+	justify-content space-between
+	align-items center
+	size(100%, 120px)
+	padding 0 260px
+	border-bottom 1px solid #4a4a4b
+	
+.logo
+	font(Roboto, 40px, 40px, 500)
+	color #ffffff
+	
+	&__link
+		color #ffffff
+	
+	&--accent
+		margin-left -10px
+		font(Pacifico, 70px, 40px)
+		font-style italic
+		color accent
+		
+.main-nav
+	position relative
+	
+	&__menu
+		position relative
+		display block
+		font(Roboto, 14px, 14px, 200)
+		text-transform uppercase
+		color #ffffff
+	
+	&__svg-menu
+		display block
+		size(35px)
+		fill #ffffff
+		
+	&__btn
+		position relative
+		display none
+		size(35px)
+		border none
+		background-color transparent
+	
+	&__item
+		padding 20px
+		color #ffffff
+		
+		&:hover
+			background-color rgba(#ffffff, 0.2)
+			
+		&:active
+			color accent
+			background-color transparent
+		
+		&--active
+			position relative
+			color  accent
+			
+			&:after
+				content ''
+				position absolute
+				bottom 0px
+				left 20%
+				display inline-block
+				size(60%, 1px)
+				background-color accent
+				text-align center
+				
+.bunner
+	display flex
+	flex-direction column
+	justify-content center
+	color #ffffff
+	text-align center
+	
+	&__title
+		padding 25px 0
+		font(Exo, 48px)
+		
+	&__logo
+		text-transform uppercase
+		color accent
+		font-weight 600
+		cursor pointer
+		
+	&__tagline
+		size(100%, auto)
+		padding 20px 340px
+		align-self center
+		font(Roboto, 18px, 36px, 200)
+		
+.main-content
+	size(100%, auto)
+	font(Roboto, 20px, 30px, 100)
+	overflow hidden
+	
+.welcome
+	display flex
+	flex-direction column
+	padding 120px 215px 20px
+	text-align center
+	
+	&__title
+		margin-bottom 50px
+		font(Roboto, 30px, 36px, 500)
+		color darkText
+		
+	&__logo
+		text-transform uppercase
+		color accent
+		
+	&__discription
+		margin-bottom 75px
+		padding 0 140px
+		
+	&__option-list
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		justify-content space-between
+		
+.option
+	size(355px, auto)
+	padding 35px 15px 30px
+	text-decoration none
+	color darkText
+	border 1px solid textColor
+	transform 0.25s ease
+	
+	&:nth-of-type(1),
+	&:nth-of-type(2),
+	&:nth-of-type(3)
+		margin-bottom 48px
+		
+	&:hover 
+		border-color accent
+		
+		.option__icon
+			fill accent
+			
+		.option__title
+			color accent
+		
+	&__icon
+		size(30px, 40px)
+		margin-bottom 15px
+		fill darkText
+		transform 0.25s ease
+		
+	&__title
+		font-size 24px
+		margin-bottom 25px
+		transform 0.25s ease
+		
+	&__description
+		font-size 14px
+		line-height 30px
+		
+		
