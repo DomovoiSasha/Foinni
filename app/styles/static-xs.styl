@@ -66,10 +66,17 @@
 	.main-content
 		size(100%, auto)
 		font(Roboto, 9.5px, 12px, 100)
+		
+		&__welcome
+			padding 25px 25px 6px
+			
+		&__team
+			padding 25px 25px 6px
+			
+		&__works
+			padding 25px 10px 6px
 
 	.welcome
-		padding 25px 25px 6px
-
 		&__title
 			margin-bottom 11px
 			font(Roboto, 12px, 14px, 500)
@@ -103,3 +110,74 @@
 		&__description
 			font-size 9px
 			line-height 12px
+			
+	.team
+		&__title
+			margin-bottom 11px
+			font(Roboto, 12px, 14px, 500)
+
+		&__list
+			width 269px
+			flex-wrap wrap
+			
+	.member
+		size(127px, auto)
+		
+		&:nth-of-type(1),
+		&:nth-of-type(2)
+			margin-bottom 15px
+			
+		&:hover
+			.member__info
+				bottom -5%
+				left -5%
+				size(110%, 110%)
+				padding-top 45%
+				background-color rgba(accent, 0.9)
+
+			.member__social
+				display block
+
+		&__photo
+			height 165px
+
+		&__info
+			padding 7px 0
+
+		&__name
+			font(Roboto, 12px, 15px, 300)
+
+		&__position
+			font(Roboto, 10px, 12px, 100)
+
+		&__social
+			margin-top 45px
+			padding 4.5vw
+
+		&__social-icon
+			max-height 8.5vw
+			max-width 22.5vw
+			
+	.works
+		&__title
+			margin-bottom 11px
+			font(Roboto, 12px, 14px, 500)
+
+		&__types li
+			margin-bottom 15px
+			
+		&__photos-block
+			justify-content center
+			
+			img
+				size(230px)
+				margin 10px 0
+
+		&__see-more
+			margin-top 10px
+			padding 10px 20px
+			font(Roboto, 10px, 10px, 100)
+
+	.types__item
+		padding 5px 8px
+		font(Roboto, 10px, 12px, 100)

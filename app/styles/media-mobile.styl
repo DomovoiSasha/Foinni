@@ -63,10 +63,17 @@
 	.main-content
 		size(100%, auto)
 		font(Roboto, 3vw, 3.8vw, 100)
+		
+		&__welcome
+			padding 8vw 8vw 2vw
+		
+		&__team
+			padding 8vw 0 2vw
+			
+		&__works
+			padding 8vw 0 2vw
 
 	.welcome
-		padding 8vw 8vw 2vw
-
 		&__title
 			margin-bottom 3.5vw
 			font(Roboto, 4vw, 4.5vw, 500)
@@ -100,3 +107,74 @@
 		&__description
 			font-size 2.8vw
 			line-height 3.9vw
+			
+	.team
+		&__title
+			margin-bottom 3.5vw
+			font(Roboto, 4vw, 4.5vw, 500)
+
+		&__list
+			flex-wrap wrap
+			justify-content space-around
+			
+	.member
+		size(40vw, auto)
+		
+		&:nth-of-type(1),
+		&:nth-of-type(2)
+			margin-bottom 3.33vw
+			
+		&:hover
+			.member__info
+				bottom -5%
+				left -5%
+				size(110%, 110%)
+				padding-top 45%
+				background-color rgba(accent, 0.9)
+
+			.member__social
+				display block
+
+		&__photo
+			height 52.2vw
+
+		&__info
+			padding 1.67vw 0
+
+		&__name
+			font(Roboto, 3.2vw, 3.8vw, 300)
+
+		&__position
+			font(Roboto, 2.5vw, 3.2vw, 100)
+
+		&__social
+			margin-top 15vw
+			padding 1.5vw
+
+		&__social-icon
+			max-height 2.83vw
+			max-width 7.5vw
+			
+	.works
+		&__title
+			margin-bottom 3.5vw
+			font(Roboto, 4vw, 4.5vw, 500)
+
+		&__types li
+			margin-bottom 3vw
+			
+		&__photos-block
+			justify-content center
+			
+			img
+				size(43vw)
+				margin 2vw 0
+
+		&__see-more
+			margin-top 1.25vw
+			padding 2vw 4vw
+			font(Roboto, 2.7vw, 2.7vw, 100)
+
+	.types__item
+		padding 0.31vw 1.25vw
+		font(Roboto, 2.7vw, 3.5vw, 100)

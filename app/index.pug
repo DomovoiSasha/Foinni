@@ -13,6 +13,7 @@ DOCTYPE
 			title Foinni
 
 			script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+			script(src="assets/scripts/libs.min.js")
 
 			link(rel="stylesheet", href="assets/styles/style.min.css")
 
@@ -40,7 +41,7 @@ DOCTYPE
 					
 			main.main-content
 			
-				section.miin-content__welcome.welcome
+				section.main-content__welcome.welcome
 					h2.welcome__title Welcome To 
 						span.welcome__logo FOINNI
 					p.welcome__discription Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -80,9 +81,155 @@ DOCTYPE
 								use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_brightness')
 							h3.option__title Photo Editing
 							p.option__description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sevdent, sunt explicabo. Nemo enim ipsam voluptatem quia 
+
+				section.main-content__team.team
+					h2.team__title Meet Us
+					
+					div.team__list
+						div.team__member.member
+							img(src="assets/images/user3.jpg", alt="Abida Foinni").member__photo
+							div.member__info
+								p.member__name Abida Foinni
+								p.member__position Photographer
+								div.member__social
+									a(href='#').member__behance
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_behance')
+									a(href='#').member__facebook
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_facebook')
+									a(href='#').member__twitter
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_twitter')
+										
+						div.team__member.member
+							img(src="assets/images/user4.jpg", alt="Abida Foinni").member__photo
+							div.member__info
+								p.member__name Liker Shohel
+								p.member__position Photographer
+								div.member__social
+									a(href='#').member__behance
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_behance')
+									a(href='#').member__facebook
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_facebook')
+									a(href='#').member__twitter
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_twitter')
+										
+						div.team__member.member
+							img(src="assets/images/user2.jpg", alt="Abida Foinni").member__photo
+							div.member__info
+								p.member__name Mahmud Koli
+								p.member__position Graphic Designer
+								div.member__social
+									a(href='#').member__behance
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_behance')
+									a(href='#').member__facebook
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_facebook')
+									a(href='#').member__twitter
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_twitter')
+										
+						div.team__member.member
+							img(src="assets/images/user1.jpg", alt="Abida Foinni").member__photo
+							div.member__info
+								p.member__name Jolil Shaheb
+								p.member__position Web Developer
+								div.member__social
+									a(href='#').member__behance
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_behance')
+									a(href='#').member__facebook
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_facebook')
+									a(href='#').member__twitter
+										svg.member__social-icon
+											use(x='0' y='0' xlink:href='assets/images/icon.svg#icon_twitter')
 	
-	
-	
+				section#tabs.main-content__works.works
+					h2.works__title Our Latest Works
+					ul.works__types.types
+						li
+							a(href="#tabs-1").types__item All
+						li
+							a(href="#tabs-2").types__item Design
+						li
+							a(href="#tabs-3").types__item.types__item--active Manipulation
+						li
+							a(href="#tabs-4").types__item Photography
+						li
+							a(href="#tabs-5").types__item Development
+							
+					div#tabs-1.works__photos-block.popup-gallery
+						a(href="assets/images/work1.jpg", title="work1")
+							img(src="assets/images/work1.jpg")
+						a(href="assets/images/work2.jpg", title="work2")
+							img(src="assets/images/work2.jpg")
+						a(href="assets/images/work3.jpg", title="work3")
+							img(src="assets/images/work3.jpg")
+						a(href="assets/images/work4.jpg", title="work4")
+							img(src="assets/images/work4.jpg")
+						a(href="assets/images/work5.jpg", title="work5")
+							img(src="assets/images/work5.jpg")
+						a(href="assets/images/work6.jpg", title="work6")
+							img(src="assets/images/work6.jpg")
+					div#tabs-2.works__photos-block
+						a(href="assets/images/work2.jpg", title="work2")
+							img(src="assets/images/work2.jpg")
+						a(href="assets/images/work3.jpg", title="work3")
+							img(src="assets/images/work3.jpg")
+						a(href="assets/images/work4.jpg", title="work4")
+							img(src="assets/images/work4.jpg")
+						a(href="assets/images/work5.jpg", title="work5")
+							img(src="assets/images/work5.jpg")
+						a(href="assets/images/work6.jpg", title="work6")
+							img(src="assets/images/work6.jpg")
+						a(href="assets/images/work1.jpg", title="work1")
+							img(src="assets/images/work1.jpg")
+					div#tabs-3.works__photos-block
+						a(href="assets/images/work3.jpg", title="work3")
+							img(src="assets/images/work3.jpg")
+						a(href="assets/images/work4.jpg", title="work4")
+							img(src="assets/images/work4.jpg")
+						a(href="assets/images/work5.jpg", title="work5")
+							img(src="assets/images/work5.jpg")
+						a(href="assets/images/work6.jpg", title="work6")
+							img(src="assets/images/work6.jpg")
+						a(href="assets/images/work1.jpg", title="work1")
+							img(src="assets/images/work1.jpg")
+						a(href="assets/images/work2.jpg", title="work2")
+							img(src="assets/images/work2.jpg")
+					div#tabs-4.works__photos-block
+						a(href="assets/images/work4.jpg", title="work4")
+							img(src="assets/images/work4.jpg")
+						a(href="assets/images/work5.jpg", title="work5")
+							img(src="assets/images/work5.jpg")
+						a(href="assets/images/work6.jpg", title="work6")
+							img(src="assets/images/work6.jpg")
+						a(href="assets/images/work1.jpg", title="work1")
+							img(src="assets/images/work1.jpg")
+						a(href="assets/images/work2.jpg", title="work2")
+							img(src="assets/images/work2.jpg")
+						a(href="assets/images/work3.jpg", title="work3")
+							img(src="assets/images/work3.jpg")
+					div#tabs-5.works__photos-block
+						a(href="assets/images/work5.jpg", title="work5")
+							img(src="assets/images/work5.jpg")
+						a(href="assets/images/work6.jpg", title="work6")
+							img(src="assets/images/work6.jpg")
+						a(href="assets/images/work1.jpg", title="work1")
+							img(src="assets/images/work1.jpg")
+						a(href="assets/images/work2.jpg", title="work2")
+							img(src="assets/images/work2.jpg")
+						a(href="assets/images/work3.jpg", title="work3")
+							img(src="assets/images/work3.jpg")
+						a(href="assets/images/work4.jpg", title="work4")
+							img(src="assets/images/work4.jpg")
+					button.works__see-more See More
 	
 	
 

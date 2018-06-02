@@ -20,6 +20,7 @@ const path = require('path');
 const imgmin = require('gulp-imagemin');
 const spritesmith = require('gulp.spritesmith-multi');
 const merge = require('merge-stream');
+const uglify = require('gulp-uglify');
 
 const tmplName = 'stylus_retina.template.handlebars';
 const tmplPath = 'node_modules/spritesmith-stylus-retina-template';
@@ -95,12 +96,19 @@ gulp.task('copy', function(){
 		.pipe(gulp.dest('dist/assets/fonts'));
 });
 
-gulp.task('js', function() {
-	return gulp.src('app/scripts/*')
+gulp.task('copyjs', function(){
+	return gulp.src('app/scripts/libs/*.js')
+		.pipe(uglify())
+		.pipe(concat('libs.min.js'))
 		.pipe(gulp.dest('dist/assets/scripts'));
 });
 
-gulp.task('build', gulp.series('img', 'icons', 'css', 'html', 'copy', 'js'));
+gulp.task('js', function() {
+	return gulp.src('app/scripts/script.js')
+		.pipe(gulp.dest('dist/assets/scripts'));
+});
+
+gulp.task('build', gulp.series('img', 'icons', 'css', 'html', 'copy', 'copyjs', 'js'));
 
 gulp.task('clean', function(){
 	return del('dist');

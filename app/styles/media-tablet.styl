@@ -34,10 +34,17 @@
 	.main-content
 		size(100%, auto)
 		font(Roboto, 2vw, 3.11vw, 100)
+		
+		&__welcome
+			padding 8vw 10vw 2vw
+		
+		&__team
+			padding 8vw 10vw 2vw
+			
+		&__works
+			padding 8vw 10vw 2vw
 
 	.welcome
-		padding 8vw 10vw 2vw
-
 		&__title
 			margin-bottom 3vw
 			font(Roboto, 3.33vw, 4vw, 500)
@@ -67,3 +74,66 @@
 		&__description
 			font-size 1.7vw
 			line-height 3.33vw
+			
+	.team
+		&__title
+			margin-bottom 3vw
+			font(Roboto, 3.33vw, 4vw, 500)
+
+	.member
+		size(17.5vw, auto)
+		
+		&:hover
+			.member__info
+				bottom -7%
+				left -5%
+				size(110%, 114%)
+				padding-top 20%
+				background-color rgba(accent, 0.9)
+
+			.member__social
+				display block
+				
+		&__photo
+			height 22.78vw
+
+		&__info
+			padding 1.67vw 0
+
+		&__name
+			font(Roboto, 1.7vw, 2vw, 300)
+
+		&__position
+			font(Roboto, 1.3vw, 2vw, 100)
+
+		&__social
+			margin-top 10vw
+			padding 1vw
+
+		&__social-icon
+			max-height 1.2vw
+			max-width 3vw
+			
+	.works
+		&__title
+			margin-bottom 3vw
+			font(Roboto, 3.33vw, 4vw, 500)
+
+		&__types li
+			margin-bottom 1vw
+			
+		&__photos-block
+			justify-content center
+			
+			img
+				size(26.64vw)
+				margin 1.3vw 0
+
+		&__see-more
+			margin-top 1.25vw
+			padding 1.25vw 3.75vw
+			font(Roboto, 1.8vw, 1.8vw, 100)
+
+	.types__item
+		padding 0.31vw 1.25vw
+		font(Roboto, 1.8vw, 3.11vw, 100)

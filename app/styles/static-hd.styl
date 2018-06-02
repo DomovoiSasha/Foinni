@@ -4,6 +4,7 @@
 	box-sizing border-box
 	text-decoration none
 	outline none
+	list-style none
 
 body 
 	max-width 1600px
@@ -125,10 +126,21 @@ body
 	font(Roboto, 20px, 30px, 100)
 	overflow hidden
 	
+	&__team
+		display flex
+		flex-direction column
+		text-align center
+		padding 100px 215px 40px
+		
+	&__welcome
+		padding 120px 215px 20px
+		
+	&__works
+		padding 100px 215px 20px
+	
 .welcome
 	display flex
 	flex-direction column
-	padding 120px 215px 20px
 	text-align center
 	
 	&__title
@@ -187,4 +199,118 @@ body
 		font-size 14px
 		line-height 30px
 		
+.team
+	&__title
+		margin-bottom 50px
+		font(Roboto, 30px, 36px, 500)
+		color darkText
 		
+	&__list
+		display flex
+		flex-direction row
+		justify-content space-between
+		flex-wrap nowrap
+	
+.member
+	position relative
+	size(270px, auto)
+	background-color #ccc
+	border 1px solid #f3fdf9
+	
+	&:hover
+		.member__info
+			bottom -7%
+			left -5%
+			size(110%, 114%)
+			padding-top 62%
+			background-color rgba(accent, 0.9)
+			
+		.member__social
+			display block
+			
+	&__photo
+		size(100%, auto)
+		max-height 355px
+	
+	&__info
+		position absolute
+		left 0
+		bottom 0
+		display block
+		size(100%, auto)
+		padding 15px 0
+		background-color rgba(dark, 0.9)
+		color #fffcf4			
+		
+	&__name
+		font(Roboto, 18px, 25px, 300)
+	
+	&__position
+		font(Roboto, 14px, 18px, 100)
+	
+	&__social
+		display none
+		size(100%, auto)
+		margin-top 90px
+		padding 9px
+		text-align center
+		border-top 1px solid rgba(#ffffff, 0.5)
+		border-bottom 1px solid rgba(#ffffff, 0.5)
+	
+	&__social-icon
+		max-height 17px
+		max-width 45px
+		fill #fffcf4
+		
+		
+		
+		
+.works
+	text-align center
+	
+	&__title
+		margin-bottom 50px
+		font(Roboto, 30px, 36px, 500)
+		color darkText
+		
+	&__types li
+		display inline-block
+		margin-bottom 25px
+		color darkText
+		
+	&__photos-block
+		width 100%
+		display flex
+		flex-direction row
+		justify-content space-between
+		flex-wrap wrap
+		
+		img
+			size(390px)
+			margin 25px 0
+		
+	&__see-more
+		margin-top 20px
+		padding 20px 60px
+		background-color accent
+		color #ffffff
+		font(Roboto, 18px, 18px, 100)
+		border 2px solid transparent
+			
+		&:hover
+			background-color transparent
+			border 2px solid accent
+			color accent
+		
+.types__item
+	padding 5px 20px
+	color darkText
+	font(Roboto, 18px, 36px, 200)
+
+	&:hover,
+	&:active
+		color accent
+	
+.ui-state-active .types__item
+	color accent
+	
