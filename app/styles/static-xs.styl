@@ -1,6 +1,7 @@
 +between(0px, 319px)
 	.body
 		width 319px
+		overflow hidden
 		
 	.main-header
 		size(100%, auto)
@@ -75,6 +76,10 @@
 			
 		&__works
 			padding 25px 10px 6px
+			
+		&__price
+			padding 25px 10px 6px
+			font(Roboto, 11px, 18px, 100)
 
 	.welcome
 		&__title
@@ -181,3 +186,63 @@
 	.types__item
 		padding 5px 8px
 		font(Roboto, 10px, 12px, 100)
+		
+	.price
+		position relative
+		height 320px
+		
+		&__title
+			margin-bottom 11px
+			font(Roboto, 12px, 14px, 500)
+			
+		&__btn-prev
+			position absolute
+			top 50%
+			left 15px
+			display block
+			size(22px)
+			background-color transparent
+			border none
+			
+		&__prev-icon
+			size(22px)
+			fill textColor
+			
+		&__btn-next
+			position absolute
+			top 50%
+			right 15px
+			display block
+			size(22px)
+			background-color transparent
+			border none
+			
+		&__next-icon
+			size(22px)
+			fill textColor
+
+	.price-plan
+		display none
+		width 190px
+		height 245px
+		margin 0 auto
+			
+		&:nth-of-type(3)
+			display block
+
+		&__name
+			padding 11px 0
+
+		&__price
+			padding 13px 0 11px
+			font(Roboto, 12px, 12px, 500)
+
+		&__time
+			font(Roboto, 9px, 10px, 100)
+
+		&__options
+			padding 14px 0 8px
+
+		&__btn-order
+			margin 9px
+			padding 8px 13px 7px

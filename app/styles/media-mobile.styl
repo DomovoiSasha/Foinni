@@ -72,6 +72,10 @@
 			
 		&__works
 			padding 8vw 0 2vw
+			
+		&__price
+			padding 8vw 8vw 8vw 
+			font(Roboto, 3.2vw, 6vw, 100)
 
 	.welcome
 		&__title
@@ -178,3 +182,64 @@
 	.types__item
 		padding 0.31vw 1.25vw
 		font(Roboto, 2.7vw, 3.5vw, 100)
+		
+	.price
+		position relative
+		height 100vw
+		
+		&__title
+			margin-bottom 4vw
+			font(Roboto, 4vw, 4.5vw, 500)
+			
+		&__btn-prev
+			position absolute
+			top 50%
+			left 5vw
+			display block
+			size(7vw)
+			background-color transparent
+			border none
+			
+		&__prev-icon
+			size(7vw)
+			fill textColor
+			
+		&__btn-next
+			position absolute
+			top 50%
+			right 5vw
+			display block
+			size(7vw)
+			background-color transparent
+			border none
+			
+		&__next-icon
+			size(7vw)
+			fill textColor
+
+	.price-plan
+		display none
+		width 60vw
+		height 77vw
+		margin 0 auto
+			
+		&:nth-of-type(3)
+			display block
+
+		&__name
+			padding 3.5vw 0
+
+		&__price
+			padding 4vw 0 3.5vw
+			font(Roboto, 4vw, 4vw, 500)
+
+		&__time
+			font(Roboto, 3vw, 3.25vw, 100)
+
+		&__options
+			padding 4.5vw 0 2.5vw
+
+		&__btn-order
+			margin 3vw
+			padding 2.5vw 4vw 2.2vw
+	
