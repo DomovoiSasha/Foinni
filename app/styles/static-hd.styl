@@ -7,6 +7,7 @@
 	list-style none
 
 body 
+	position relative
 	max-width 1600px
 	margin 0 auto
 	padding 0
@@ -24,6 +25,9 @@ body
 	background-position center
 	color #fff
 	overflow hidden
+	
+	+retina()
+		background-image url('../images/bunner@2.jpg')
 	
 	&__bunner
 		size(100%, 680px)
@@ -143,6 +147,16 @@ body
 		text-align center
 		color textColor
 		font(Roboto, 14px, 26px, 100)
+		
+	&__feedback
+		padding 35px 350px
+		background-image url('../images/fomr-bg.jpg')
+		background-repeat no-repeat
+		background-size cover
+		text-align center
+		
+		+retina()
+			background-image url('../images/fomr-bg@2.jpg')
 	
 .welcome
 	display flex
@@ -325,6 +339,10 @@ body
 		margin-bottom 20px
 		font(Roboto, 30px, 36px, 500)
 		color darkText
+		
+	&__btn-prev,
+	&__btn-next	
+		display none
 
 .price-plan
 	display inline-block
@@ -374,22 +392,257 @@ body
 		background-color transparent
 		border 1px solid textColor
 		
-	&__btn-prev,
-	&__btn-next
-		display none
+.feedback
+	color #ffffff
+	text-transform uppercase
 	
+	&__title
+		margin-bottom 20px
+		font(Roboto, 30px, 36px, 500)
+
+	&__form
+		width 100%
+		text-align center
+		color #ffffff
+		
+	&__name
+		display inline-block
+		width 47%
+		margin-right 6%
+		margin-bottom 27px
+		padding 18px
+		background-color transparent
+		border 1px solid #fff
+		color #fff
+		font(Roboto, 14px, 36px, 100)
+		placeholder(color, #fff)
+		placeholder(font-weight, 100)
+		placeholder(font-style, italic)
+		placeholder(font-size, 14px)
+		
+		&:hover,
+		&:focus
+			border-color accent
+		
+	&__email
+		display inline-block
+		width 47%
+		padding 18px
+		background-color transparent
+		color #fff
+		font(Roboto, 14px, 36px, 100)
+		border 1px solid #fff
+		placeholder(color, #fff)
+		placeholder(font-weight, 100)
+		placeholder(font-style, italic)
+		placeholder(font-size, 14px)
+		
+		&:hover,
+		&:focus
+			border-color accent
+		
+	&__message
+		width 100%
+		padding 18px
+		background-color transparent
+		color #fff
+		font(Roboto, 14px, 36px, 100)
+		border 1px solid #fff
+		placeholder(color, #fff)
+		placeholder(font-weight, 100)
+		placeholder(font-style, italic)
+		placeholder(font-size, 14px)
+		
+		&:hover,
+		&:focus
+			border-color accent
+		
+	&__btn
+		display block
+		margin 0 auto
+		margin-top 35px
+		padding 15px 35px
+		color #fff
+		background-color accent
+		font(Roboto, 18px, 22px, 100)
+		border 1px solid transparent
+		
+		&:hover
+			background-color accent
+			color #fff
+			border-color accent
+			
+.main-footer
+	background-color #0b0a0a
+	color textColor
 	
+	&__top
+		display flex
+		flex-direction column
+		flex-wrap wrap
+		size(100%, 330px)
+		padding 30px 320px 70px 245px
+		
+	&__about
+		size(320px, auto)
+		margin-right 120px
+		font(Roboto, 14px, 30px, 100)
+		
+	&__footer-nav
+		margin-right 155px
+		
+	&__social-links
+		size(200px, 75px)
+		
+	&__subscribe-form
+		size(250px, 130px)
+		
+	&__bottom
+		background-color #000000
+		color #ffffff
+		text-align center
+		
+	&__copyright
+		padding 25px
+		font(Roboto, 14px, 36px, 100)
+		
+.about
+	&__title
+		color #fff
+		font(Roboto, 18px, 36px, 300)
+		
+.footer-nav
+	&__title
+		color #fff
+		font(Roboto, 18px, 36px, 300)
+		
+	&__list
+		list-style none
+		column-count 2
+		column-gap 25px
+		
+	&__link
+		color textColor
+		text-decoration none
+		font(Roboto, 14px, 30px, 100)
+		
+		&:hover
+			color accent
+		
+.social-links
+	margin-bottom 12px
 	
+	&__title
+		color #fff
+		font(Roboto, 18px, 36px, 300)
+		
+	&__list
+		list-style none
+		
+		li
+			display inline-block
+		
+	&__link
+		display inline-block
+		size(40px)
+		margin 5px
+		border 1px solid textColor
+		text-decoration none
+		text-align center
+		vertical-align middle
+		
+		&:hover .social-links__icon
+			fill accent
+		
+	&__icon
+		size(40px)
+		padding 10px
+		fill textColor
+		
+.subscribe-form
+	&__title
+		margin-bottom 5px
+		color #fff
+		font(Roboto, 18px, 36px, 300)
+		
+	&__input-email
+		width 250px
+		margin-bottom 15px
+		padding 10px 8px
+		background-color transparent
+		border 1px solid textColor
+		font(Roboto, 14px, 20px, 100)
+		color #fff
+		placeholder(color, textColor)
+		placeholder(font-weight, 100)
+		placeholder(font-size, 14px)
+		
+		&:hover
+			border-color accent
+		
+	&__btn
+		padding 10px 20px
+		background-color accent
+		color #fff
+		font(Roboto, 14px, 20px, 100)
+		border 1px solid transparent
+		
+		&:hover
+			background-color transparent
+			color accent
+			border-color accent
 	
+.modal-form
+	display none
 	
+	&__window
+		position fixed
+		top 50vh
+		left 50vw
+		display block
+		size(500px, 300px)
+		padding 110px 0
+		margin-left -250px
+		margin-top -150px
+		background-color #fff
+		color textColor
+		text-align center
+		font(Roboto, 20px, 30px, 300)
+		z-index 100
 	
+	&__overlay
+		position fixed
+		top 0
+		left 0
+		display block
+		size(100%)
+		background-color rgba(#000, 70%)
 	
+.modal-link
+	display none
 	
+	&__window
+		position fixed
+		top 50vh
+		left 50vw
+		display block
+		size(500px, 300px)
+		padding 110px 0
+		margin-left -250px
+		margin-top -150px
+		background-color #fff
+		color textColor
+		text-align center
+		font(Roboto, 20px, 30px, 300)
+		z-index 100
 	
-	
-	
-	
-	
+	&__overlay
+		position fixed
+		top 0
+		left 0
+		display block
+		size(100%)
+		background-color rgba(#000, 70%)
 
 
 

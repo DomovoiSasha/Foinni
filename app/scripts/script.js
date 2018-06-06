@@ -8,12 +8,21 @@
 	const slideshowLength = $('.price-plan').length;
 	const firstSlide = $('.price-plan').eq(0);
 	const lastSlide = $('.price-plan').eq(slideshowLength - 1);
+	const feedbackForm = $('.feedback__form');
+	const feedbackName = $('.feedback__name');
+	const feedbackEmail = $('.feedback__email');
+	const feedbackMessage = $('.feedback__message');
+	const modalForm = $('.modal-form');
+	const modalLink = $('.modal-link');
+	const subscribeForm = $('.subscribe-form__form');
+	const subscribeEmail = $('.subscribe-form__input-email');
+	const links404 = $('a[href="#"]');
 	
 	$(menuBtn).click(function(e){
 		$(menu).stop().slideToggle(400);
 	});
 	
-	$( "#tabs" ).tabs({
+	$('#tabs').tabs({
 		event: "mouseover"
 	});
 	
@@ -36,7 +45,7 @@
 	});
 	
 	
-	$(nextPlan).bind("click", function(e){
+	$(nextPlan).bind('click', function(e){
 		let currentSlide = $('.price-plan:visible');
 		let nextSlide = $($(currentSlide).next());
 		$(currentSlide).hide();
@@ -45,9 +54,8 @@
 		} else {
 			$(nextSlide).show();
 		}
-	});
-	
-	$(prevPlan).bind("click", function(e){
+	});	
+	$(prevPlan).bind('click', function(e){
 		let currentSlide = $('.price-plan:visible');
 		let prevSlide = $($(currentSlide).prev());
 		$(currentSlide).hide();
@@ -58,5 +66,117 @@
 		}
 	});
 	
+	let nameValid = function () {
+		let pattern = new RegExp(/^[a-zA-Zа-яА-Я]+$/);
+		if (feedbackName.val() != '') {
+			if (feedbackName.val().search(pattern) == 0) {
+				$(feedbackName).css({'color': '#ffffff'});
+				return true;
+			}else{
+				$(feedbackName).css({'color': 'red'});
+				return false;
+			}
+		} else {
+			return false;
+		}
+	};
+	let emailValid = function () {
+		let pattern = new RegExp(/^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i);
+		if (feedbackEmail.val() != '') {
+			if (feedbackEmail.val().search(pattern) == 0) {
+				$(feedbackEmail).css({'color': '#ffffff'});
+				return true;
+			} else {
+				$(feedbackEmail).css({'color': 'red'});
+				return false;
+			}
+		} else {
+			return false;
+		}
+	};
+	let messageValid = function () {
+		if (feedbackMessage.val() != '') {
+			return true;
+		} else {
+			return false;
+		}
+	};
+	
+	$(feedbackName).bind('blur', function(e){
+		nameValid();
+	});
+	
+	$(feedbackEmail).bind('blur', function(e){
+		emailValid();
+	});
+	
+	$(feedbackMessage).bind('blur', function(e){
+		messageValid();
+	});
+	
+	$(feedbackForm).submit(function () {
+		event.preventDefault();
+		nameValid ();
+		emailValid ();
+		messageValid ();
+		if ( nameValid () && emailValid () && messageValid ()) {
+			$(modalForm).show();
+		} else {
+			return false;
+		}
+		event.preventDefault();
+		
+	});
+	
+	$(modalForm).click(function () {
+		$(this).hide();
+	});
+	
+	$(modalLink).click(function () {
+		$(this).hide();
+	});
+
+	$(document).keydown(function (e) {
+		if (e.which === 27) {
+			$(modalForm).hide();
+			$(modalLink).hide();
+		}
+	});
+	
+	$(links404).bind('click', function(){
+		event.preventDefault();
+		$(modalLink).show();
+	});
+	
+	let subscribeValid = function () {
+		let pattern = new RegExp(/^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i);
+		if (subscribeEmail.val() != '') {
+			if (subscribeEmail.val().search(pattern) == 0) {
+				$(subscribeEmail).css({'color': '#ffffff'});
+				return true;
+			} else {
+				$(subscribeEmail).css({'color': 'red'});
+				return false;
+			}
+		} else {
+			return false;
+		}
+	};
+	
+	$(subscribeEmail).bind('blur', function(e){
+		subscribeValid();
+	});
+	
+	$(subscribeForm).submit(function () {
+		event.preventDefault();
+		subscribeValid ();
+		if ( subscribeValid ()) {
+			$(modalForm).show();
+		} else {
+			return false;
+		}
+		event.preventDefault();
+		
+	});
 	
 })()
